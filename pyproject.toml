@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "multi-qlora"
+version = "0.1.0"
+description = ""
+authors = ["akkky02 <akshatpatil7@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+vllm = "^0.4.3"
+ipykernel = "^6.29.4"
+ipywidgets = "^8.1.3"
+nvitop = "^1.3.2"
+python-dotenv = "^1.0.1"
+lorax-client = "^0.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
