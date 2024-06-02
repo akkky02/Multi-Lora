@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  lorax:
+    image: ghcr.io/predibase/lorax:main
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ "gpu" ]
+    shm_size: '1gb'
+    environment:
+      # - MODEL_ID: "mistralai/Mistral-7B-Instruct-v0.1"
+      - HF_TOKEN # Replace with your actual token
+    command: --model-id mistralai/Mistral-7B-Instruct-v0.1 --quantize bitsandbytes-nf4
