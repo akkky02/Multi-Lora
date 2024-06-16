@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   lorax:
     image: ghcr.io/predibase/lorax:main
